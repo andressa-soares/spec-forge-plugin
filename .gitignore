@@ -1,0 +1,10 @@
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings (keep the skills!)
+.claude/settings.local.json
