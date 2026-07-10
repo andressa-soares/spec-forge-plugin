@@ -31,14 +31,21 @@ claude plugin install spec-forge@sdd
 
 ## Usage
 
-Once installed, just describe what you want to build. A vague prompt is fine —
-the skill will ask what it genuinely needs:
+The skill is **model-invoked**: just describe what you want to build and Claude
+triggers it automatically from its description. A vague prompt is fine — the
+skill will ask what it genuinely needs:
 
 > Quero fazer um app de lista de tarefas com lembretes.
 
-The skill runs a small state machine: clarify → generate `requirements.md` →
-**review checkpoint** → clarify the tech → generate `design.md`, writing both
-files to `specs/<feature-name>/`.
+To invoke it explicitly, use the namespaced slash command (`plugin:skill`):
+
+```
+/spec-forge:spec-forge
+```
+
+Either way, the skill runs a small state machine: clarify → generate
+`requirements.md` → **review checkpoint** → clarify the tech → generate
+`design.md`, writing both files to `specs/<feature-name>/`.
 
 ## What's inside
 
