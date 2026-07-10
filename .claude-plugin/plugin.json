@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "spec-forge",
+  "displayName": "spec-forge",
+  "version": "0.1.0",
+  "description": "Turns a natural-language feature or project idea into a spec-driven-development specification — an EARS requirements.md (the what) plus a technical design.md (the how) — asking only the essential clarifying questions when the prompt is vague.",
+  "author": {
+    "name": "Andressa",
+    "email": "andressasoares.dev@gmail.com"
+  },
+  "homepage": "https://github.com/andressa-soares/spec-forge-plugin",
+  "repository": "https://github.com/andressa-soares/spec-forge-plugin",
+  "license": "MIT",
+  "keywords": [
+    "spec-driven-development",
+    "sdd",
+    "requirements",
+    "ears",
+    "design-doc",
+    "specification"
+  ],
+  "skills": "./skills/"
+}

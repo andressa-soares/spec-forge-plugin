@@ -6,5 +6,8 @@
 .DS_Store
 Thumbs.db
 
-# Claude Code local settings (keep the skills!)
+# Claude Code local settings
 .claude/settings.local.json
+
+# Generated specs (skill output — not part of the published plugin)
+specs/

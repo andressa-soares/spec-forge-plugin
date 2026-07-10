@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "sdd",
+  "owner": {
+    "name": "Andressa",
+    "email": "andressasoares.dev@gmail.com"
+  },
+  "description": "Single-plugin marketplace for spec-forge — spec-driven-development requirements + design from a natural-language idea.",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "spec-forge",
+      "source": ".",
+      "description": "Turns a natural-language feature or project idea into an EARS requirements.md plus a technical design.md, asking only the essential clarifying questions.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Andressa"
+      },
+      "homepage": "https://github.com/andressa-soares/spec-forge-plugin",
+      "repository": "https://github.com/andressa-soares/spec-forge-plugin",
+      "license": "MIT",
+      "keywords": [
+        "spec-driven-development",
+        "sdd",
+        "requirements",
+        "ears",
+        "design-doc"
+      ]
+    }
+  ]
+}

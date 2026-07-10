@@ -1,0 +1,71 @@
+# spec-forge
+
+A Claude Code plugin that turns a natural-language feature or project idea into
+a **spec-driven-development (SDD)** specification:
+
+- **`requirements.md`** — the *what*, written in [EARS](skills/spec-forge/references/ears-notation.md) notation
+- **`design.md`** — the *how*, the technical design
+
+It asks **only the essential clarifying questions** when your prompt is vague,
+reviews requirements with you before designing, and **never generates code** —
+it stops at design.
+
+## Install
+
+Inside a Claude Code session:
+
+```
+/plugin marketplace add andressa-soares/spec-forge-plugin
+/plugin install spec-forge@sdd
+```
+
+Or from the CLI:
+
+```bash
+claude plugin marketplace add andressa-soares/spec-forge-plugin
+claude plugin install spec-forge@sdd
+```
+
+`spec-forge@sdd` reads as `plugin@marketplace` — the `spec-forge` plugin from the
+`sdd` marketplace.
+
+## Usage
+
+Once installed, just describe what you want to build. A vague prompt is fine —
+the skill will ask what it genuinely needs:
+
+> Quero fazer um app de lista de tarefas com lembretes.
+
+The skill runs a small state machine: clarify → generate `requirements.md` →
+**review checkpoint** → clarify the tech → generate `design.md`, writing both
+files to `specs/<feature-name>/`.
+
+## What's inside
+
+```
+.claude-plugin/
+  plugin.json          # plugin manifest
+  marketplace.json     # single-plugin marketplace manifest
+skills/
+  spec-forge/
+    SKILL.md           # the skill definition (state machine + guardrails)
+    assets/            # requirements & design templates
+    references/        # EARS notation reference
+specs/
+  spec-forge/          # the spec that describes spec-forge itself (example output)
+```
+
+## Local development
+
+To try changes before pushing, add this checkout as a local marketplace:
+
+```
+/plugin marketplace add ./
+/plugin install spec-forge@sdd
+```
+
+After editing files, refresh with `/plugin marketplace update sdd`.
+
+## License
+
+[MIT](LICENSE) © Andressa
