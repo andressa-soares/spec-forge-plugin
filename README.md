@@ -45,15 +45,16 @@ files to `specs/<feature-name>/`.
 ```
 .claude-plugin/
   plugin.json          # plugin manifest
-  marketplace.json     # single-plugin marketplace manifest
+  marketplace.json     # single-plugin marketplace manifest (name: sdd)
 skills/
   spec-forge/
     SKILL.md           # the skill definition (state machine + guardrails)
     assets/            # requirements & design templates
     references/        # EARS notation reference
-specs/
-  spec-forge/          # the spec that describes spec-forge itself (example output)
 ```
+
+The skill writes its output to `specs/<feature-name>/` in your own project;
+that directory is not part of the published plugin.
 
 ## Local development
 
